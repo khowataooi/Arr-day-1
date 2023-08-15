@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="bai1"></p>
+    <p id="bai2"></p>
+    <p id="bai3"></p>
+    <p id="bai4"></p>
+    <p id="bai5"></p>
+    <p id="bai6"></p>
+    <p id="bai7"></p>
+    <p id="bai8"></p>
+    <p id="bai9"></p>
+    <p id="bai10"></p>
+    <p id="bai11"></p>
+    <script>
+      const arr = [1, 7, 5, 9, 2, 6];
+
+      let b1 = "";
+
+      arr.map((a) => {
+        b1 += a;
+      });
+      document.getElementById("bai1").innerHTML = b1;
+
+      let b2 = "";
+      arr.map((a, index) => {
+        if (a % 2 == 0) {
+          b2 += a;
+        }
+      });
+      document.getElementById("bai2").innerHTML = b2;
+
+      let b3 = "";
+      arr.map((a, index) => {
+        if (index % 2 == 0) {
+          b3 += a;
+        }
+      });
+      document.getElementById("bai3").innerHTML = b3;
+
+      let b4 = 0;
+      arr.map((a, index) => {
+        if (a % 2 == 0) {
+          b4 += a;
+        }
+      });
+      document.getElementById("bai4").innerHTML = b4;
+
+      let b5 = 0;
+      arr.map((a) => {
+        if (a > 5) {
+          b5 += a;
+        }
+      });
+      document.getElementById("bai5").innerHTML = b5;
+
+      let b6 = 0;
+      arr.map((a) => {
+        if (a % 7 == 2) {
+          b6 += a;
+        }
+      });
+      document.getElementById("bai6").innerHTML = b6;
+
+      let b7 = 0;
+      arr.map((a) => {
+        if (a > b7) {
+          b7 = a;
+        }
+      });
+      document.getElementById("bai7").innerHTML = b7;
+
+      let b8 = 0;
+      arr.map((a) => {
+        if (a % 2 == 0 && a > b8) {
+          b8 = a;
+        }
+      });
+      document.getElementById("bai8").innerHTML = b8;
+
+      let b9 = 999999;
+      arr.map((a) => {
+        if (a < b9) {
+          b9 = a;
+        }
+      });
+      document.getElementById("bai9").innerHTML = b9;
+
+      let b10 = 0;
+      arr.map((a) => {
+        if (a % 5 == 0) {
+          b10++;
+        }
+      });
+      document.getElementById("bai10").innerHTML = b10;
+
+      let soLuong = 0,
+        tong = 0;
+      arr.map((a) => {
+        if (a % 5 == 0) {
+          soLuong++;
+          tong += a;
+        }
+      });
+      document.getElementById("bai11").innerHTML = tong / soLuong;
+    </script>
+  </body>
+</html>
